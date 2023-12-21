@@ -1,0 +1,539 @@
+.Container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .OperatingLine {
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .SideBar {
+    width: 511px;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    box-shadow: 4px 0px 9px -5px rgba(0, 0, 0, 0.1) ;
+    align-items: flex-start;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    background-color: rgba(234, 234, 234, 1);
+  }
+  .InputSection {
+    gap:45px;
+    display: flex;
+    padding: 28px 30px;
+    overflow: hidden;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .InputField {
+    width: 454.5656433105469px;
+    height: 81px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .Group1{
+    top: 0px;
+    left: 0px;
+    width: 413px;
+    height: 81px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .DepartureTextBox{
+    gap: 8px;
+    top: 0px;
+    left: 0px;
+    width: 350px;
+    height: 32px;
+    display: flex;
+    padding: 9px 14px;
+    position: absolute;
+    align-items: center;
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 8px; 
+    display: inline-flex;
+    border-color: rgba(173, 173, 173, 1);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .Text{
+    color: rgba(0, 0, 0, 0.20000000298023224);
+    width: 75px;
+    height: auto;
+    font-size: 17px;
+    font-style: Regular;
+    text-align: left;
+    font-family: League Spartan;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .ArrivalTextBox{
+    gap: 8px;
+    top: 60px;
+    left: 0px;
+    width: 350px;
+    height: 32px;
+    display: flex;
+    padding: 9px 14px;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    border-color: rgba(173, 173, 173, 1);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .Text{
+    color: rgba(0, 0, 0, 0.20000000298023224);
+    width: 75px;
+    height: auto;
+    font-size: 17px;
+    font-style: Regular;
+    text-align: left;
+    font-family: League Spartan;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .Interchange{
+    top: 45px;
+    left: 390px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+  }
+  .SearchButton{
+    gap: 30px;
+    width: 100px;
+    height: 30px;
+    display: inline-flex;
+    padding: 15px 40px;
+    overflow: hidden;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 50px;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 1);
+  }
+.SearchText{
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 10px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Lexend Exa;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.SearchResult{
+    gap: 10px;
+    display: flex;
+    padding: 10px 15px;
+    overflow: hidden;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: rgba(234, 234, 234, 1);
+}
+.SearchResultLabel{
+    width: 484px;
+    height: 13px;
+    color: black;
+    font-size: 10px;
+    font-family: Lexend Exa;
+    font-weight: 400;
+    word-wrap: break-word;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+.DecorativeLine{
+    top: 6px;
+    left: 114px;
+    width: 370px;
+    height: 1px;
+    position: absolute;
+    border: 1px #C4C4C4 solid"
+}
+/* Can be changed to SearchResultLabel class*/
+.Text06{
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 10px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Lexend Exa;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.SearchResultSection{
+    gap: 10px;
+    display: flex;
+    padding: 0 0 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: rgba(234, 234, 234, 1);
+}
+.TravelInformationSection{
+    display: flex;
+    padding: 0px 50px 0px 50px;
+    gap: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.05000000074505806) ;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+}
+.Column1{
+    width: 325px;
+    display: flex;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 1);
+}
+.TotalDistanceAndTime{
+    gap: 15px;
+    height: 57px;
+    display: flex;
+    padding: 10px 30px;
+    box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.05000000074505806) ;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 30px;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+}
+.TotalDistance{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.DistanceIcon{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+.Layer1{
+    top: 0px;
+    left: 0px;
+    width: 19.986709594726562px;
+    height: 19.986709594726562px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+.Group{
+    top: 0px;
+    left: 0px;
+    width: 19.986709594726562px;
+    height: 19.986709594726562px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+.TotalDistanceText{
+    color: rgba(0, 0, 0, 1);
+    width: 129px;
+    height: auto;
+    font-size: 30px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Lexend Exa;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.TotalTime{
+    gap: 10px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+.TimeIcon{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+.TotalTimeText{
+    color: rgb(0, 0, 0);
+    height: auto;
+    font-size: 12px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: "League Spartan";
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.Stations{
+    width: 304px;
+    display: flex;
+    padding: 0 16px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10000000149011612) ;
+    align-items: flex-start;
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+}
+.Departure{
+    gap: 12px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.DepartureStation{
+    gap: 5px;
+    width: 239px;
+    display: flex;
+    padding: 0 3px 0 0;
+    align-items: flex-start;
+}
+.LineColorFrame{
+    width: 18px;
+    height: 60px;
+}
+.StationNameFrame{
+    gap: 10px;
+    width: auto;
+    display: flex;
+    padding: 15px 0;
+    align-items: flex-start;
+    padding-right: 15px 0;
+}
+.DepartureStationText{
+    color: rgb(0, 0, 0);
+    width: 190px;
+    height: auto;
+    font-size: 15px;
+    font-style: Regular;
+    text-align: left;
+    font-family: "Lexend Exa";
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.LineNameFrame{
+    padding: 17px 0px 0px;
+}
+.Arrival{
+    gap: 12px;
+    display: flex;
+    align-items: center;
+}
+.ArrivalStation{
+    gap: 5px;
+    display: flex;
+    padding: 0 3px 0 0;
+    align-items: flex-start;
+}
+.LineNameFrame1{
+    padding: 17px 0px 0px;
+}
+.Frame6{
+    width: 18px;
+    height: 23px;
+}
+.StationNameFrame1{
+    gap: 10px;
+    width: auto;
+    display: flex;
+    padding: 15px 0;
+    align-items: flex-start;
+}
+.ArrivalStationText{
+    color: rgb(0, 0, 0);
+    width: 190px;
+    height: auto;
+    font-size: 15px;
+    font-style: Regular;
+    text-align: left;
+    font-family: "Lexend Exa";
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.LineColorFrame1{
+    width: 18px;
+    height: 30px;
+}
+.Price{
+    gap: 7px;
+    height: 133px;
+    display: flex;
+    padding: 10px 5px;
+    overflow: hidden;
+    box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.05000000074505806) ;
+    align-items: flex-end;
+    flex-shrink: 0;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+}
+.FareFrame{
+    gap: 3px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+}
+.FareText{
+    width: 73px;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+.FareValue{
+    top: 11px;
+    left: 25px;
+    color: rgb(0, 0, 0);
+    width: auto;
+    height: auto;
+    position: absolute;
+    font-size: 25px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: "Lexend Exa";
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.PesoSign{
+    top: 10px;
+    left: 1px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 25px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Lexend Exa;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.StoredValueLabel{
+    color: rgb(0, 0, 0);
+    width: auto;
+    height: auto;
+    font-size: 9px;
+    font-style: Regular;
+    text-align: left;
+    font-family: "League Spartan";
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.FareOptions{
+    gap: 10px;
+    display: flex;
+    padding: 5px 14px;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 21px;
+    justify-content: center;
+    background-color: rgba(133, 138, 134, 1);
+}
+.Beep{
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 10px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Lexend Exa;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.FareOptions1{
+    gap: 10px;
+    display: flex;
+    padding: 5px 14px;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 21px;
+    justify-content: center;
+    background-color: rgba(28, 194, 73, 1);
+}
+.SingleJourney{
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 10px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Lexend Exa;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.HideBar{
+    width: 50px;
+    height: 23px;
+    padding: 1px 1px 10px 465px;
+    justify-content: flex-end;
+    display: inline-flex;
+}
+
+.TrainRoutes{
+    width: 929px;
+    height: 762px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgb(37, 37, 61);
+}
