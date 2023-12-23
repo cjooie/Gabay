@@ -1,0 +1,79 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(5, 5, 5);
+    color: white;
+    height: 50px;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+} 
+
+header.a {
+    color:white;
+    font-family: League Spartan;
+}
+
+/*      --      HERO SECTION    --      */
+
+#hero{
+    padding: 74px;
+}
+
+#train{
+    height: 120px;
+    clip-path: inset(0% 25% round 10px);
+    
+}
+
+.arrow{
+    height: 70px;
+}
+
+.asterisk{
+    height: 70px;
+}
+
+.lines{
+    height: 70px
+}
+
+/*      --      FEATURES SECTION    --      */
+#features{
+    background: url(assets/train-bg.jpg)no-repeat;
+    padding-top: 170px;
+    height: 800px;
+}
+
+#features-content{
+    background: white;
+    height: 600px;
+}
+
+/*      --      TUTORIAL SECTION    --      */
+#tutorial{
+    padding-top: 400px;
+    
+}
+#artwork{
+    position:absolute;
+    height: 325px;
+    
+}
+#train-artwork{
+    position: absolute;
+    top: 1950px;
+    width: 98.5%
+}
+
+footer{
+    display: flex;
+    background-color: #406302;
+    width: 1440;
+    height: 300px;
+    position: absolute;
+    top: 2350px;
+}
