@@ -41,7 +41,7 @@
     position: relative;
     align-items: flex-start;
     flex-shrink: 0;
-  }
+  } 
   .Group1{
     top: 0px;
     left: 0px;
@@ -156,6 +156,7 @@
     flex-direction: column;
     background-color: rgba(234, 234, 234, 1);
 }
+
 .SearchResultLabel{
     width: 484px;
     height: 13px;
@@ -169,6 +170,7 @@
     align-items: flex-start;
     flex-shrink: 0;
 }
+
 .DecorativeLine{
     top: 6px;
     left: 114px;
@@ -177,6 +179,7 @@
     position: absolute;
     border: 1px #C4C4C4 solid"
 }
+
 /* Can be changed to SearchResultLabel class*/
 .Text06{
     color: rgba(0, 0, 0, 1);
@@ -294,6 +297,7 @@
     align-items: flex-start;
     flex-shrink: 0;
 }
+
 .TotalTimeText{
     color: rgb(0, 0, 0);
     height: auto;
@@ -537,3 +541,4 @@
     flex-shrink: 0;
     background-color: rgb(37, 37, 61);
 }
+

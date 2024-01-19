@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./operating-line-2.css" rel="stylesheet">
+    <title>Operating Line</title>
+</head>
+<body>
+    <div id="container">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <div class="section" id="search">
+                <div class="textbox" id="departure"> DEPARTURE </div>
+                <div class="textbox" id="arrival"> ARRIVAL </div>
+                <img
+                    class ="btn-interchange"
+                    src="assets/interchange-icon.svg"
+                    alt="Interchange departure and arrival location icon"
+                />
+                <button class="btn-search"> SEARCH </button>
+            </div>
+            <div id="section-result"> SEARCH RESULTS </div>
+            <div class="section" id="result">
+                
+                <div id="distance-time-stations">
+                <div id="distance-time">
+                    <div id="distance"> 1000 m </div>  <!-- change the total distance -->
+                    <div id="time">10 MINS</div> <!-- change the total number of travel in minutes -->
+                </div>
+                <div id="stations">
+                    <div class="station-frame">
+                        <img src="assets/line-color-lrt-1.svg" class="line-color"/>
+                        <div class="station-name">
+                        <span class="departure-label"> Fernando Poe Jr. </span>  <!-- change the name of the departure station -->
+                        </div>
+                        <img src="assets/line-name-lrt-1.png" class="train-line"/> <!-- change the train line -->
+                    </div>
+
+                    <div class="station-frame"> 
+                        <img src="assets/line-color-lrt-2.svg" class="line-color"/>
+                        <div class="station-name">
+                        <span class="arrival-label">Araneta-Center Cubao</span> <!-- change the name of the departure station -->
+                        </div>
+                        <img src="assets/line-name-lrt-2.png" class="train-line"/> <!-- change the train line -->
+                    </div>
+                </div>
+            </div>
+                <div id="fare">
+                    <div class="fare-frame">
+                    <div class="fare-label"> ₱ 2330 </div>
+                    <div class="fare-options">
+                    <span class="StoredValueLabel">STORED VALUE</span>
+                    <button class="beep"> Beep </button>
+                    </div>
+                    <button class="single-journey"> Single Journey </button>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="map">
+            <iframe
+            width="600"
+            height="450"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/place?key=
+              &q=Space+Needle,Seattle+WA">
+          </iframe>
+        <input type="checkbox" id="btnControl"/>
+        <img class="openbtn" for="btnConrtol" onclick="openNav()" src="assets/hidebar-icon.svg"/> </button> 
+        </div>
+    </div>
+    <script src="./operating-line.js"></script>
+</body>
+</html>
