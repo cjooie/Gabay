@@ -1,36 +1,46 @@
+@media screen and (max-width: 720px){
 body{
     margin: 0px;
     padding: 0px;
 }
 
-#container {
-    display: flex;
-}
-
-#map {
-    flex: 1;
+#container{
     height: 100vh;
+    max-width: 720px;
     display: flex;
     flex-direction: column;
+    flex-flow: column-reverse;
+    
 }
 
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
+#map{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 500vh;
+    transition: margin-left .5s;
+}
+
+#mySidebar{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+}
+.sidebar{
+    height: 0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: auto;
     transition: 0.5s;
-    padding-top: px;
+    z-index: 2;
 }
 
-.sidebar a {
-    padding: 8px 8px 8px 32px;
+.sidebar a{
+    color: white;
+    padding: 14px 16px;
     text-decoration: none;
-    font-size: 25px;
-    display: block;
+    font-size: 17px;
+    display: flex;
     transition: 0.3s;
 }
   
@@ -38,12 +48,17 @@ body{
     color: #f1f1f1;
 }
 
-.section{
+.result-section{
+    display: flex;
     box-shadow: inset 3px 4px 5px #f5f4f4;
 }
 
+.result-section.hidden{
+    display: none;
+}
+
 #search{
-    height: 32%;
+    height: 50%;
 }
 
 .textbox{
@@ -55,41 +70,35 @@ body{
     font-family: League Spartan;
     font-size: 15px;
     font-weight: 400;
-    width: 350px;
+    width: 30vh;
     height: 32px;
-    display: flex;
-    padding: 9px 14px;
-    position: absolute;
-    align-items: center;
+    padding: 9px 14px;    
 }
 
+
 #departure{
-    margin: 40px 20px;
-    gap: 8px;
-    top: 0px;
-    left: 0px;
+    margin: 0px 0px 0px 90px;
+    align-self: center;
 }
 
 #arrival{
-    margin: 40px 20px;
-    gap: 8px;
-    top: 60px;
-    left: 0px;
+    margin: 0px 0px 0px 90px;
+    align-self: center;
 }
 
 .btn-interchange{
-    margin: 80px 410px;
+    padding-bottom: 20px;
 }
 
 .btn-search{
-    margin: -30px 300px;
     color: rgba(255, 255, 255, 1);
     font-size: 10px;
     font-family: Lexend Exa;
     font-weight: 400;
     text-decoration: none;
-    width: 100px;
-    height: 40px;
+    margin: 10px 110px;
+    width: 30vh;
+    height: 60px;
     border-radius: 50px;
     background-color: rgba(0, 0, 0, 1);
 }
@@ -97,11 +106,10 @@ body{
 .sidebar-btn {
     width: 40px;
     height: 40px;
-    margin: 90px 200px 10px 10px;
+    margin: 20px;
     cursor: pointer;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-self: center;
 }
 
 .icon {
@@ -109,18 +117,21 @@ body{
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
+    transform: rotateY(90);
 }
 
 #btnControl {
     display: none;
 }
 
-#map{
-    transition: margin-left .5s;
-    padding: 16px;
-}
 
 /* -------------------------- RESULT -----------------------------*/
+
+.result-label{
+    margin: 20px;
+    font-family: Lexend Exa;
+    font-weight: 400;
+}
 
 #result{
     font-size: 12px;
@@ -128,14 +139,15 @@ body{
     font-weight: 400;
     display: flex;
     flex-direction: row;
-    overflow-y: hidden;
 }
 
-#section-result{
-    padding: 20px 20px 20px;
+.result-section{
+    padding: 10px 5px;
     font-size: 12px;
     font-family: Lexend Exa;
     font-weight: 400;
+    height: 400px; /* Set a fixed height for scrollability */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 #distance-time-station{
@@ -144,11 +156,13 @@ body{
 }
 
 /*---------------  STATIONS INFORMATION ---------------- */
+
 #distance-time{
     width: 280px;
     margin: 20px 20px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 20px;
 }
 
@@ -166,6 +180,15 @@ body{
     text-align: left;
     font-family: "League Spartan";
 }
+
+
+#time-icon, #distance-icon{
+    width: 20px;
+    height: 20px;
+    margin: -10px;
+    align-items: center;
+}
+
 
 #stations{
     width: 265px;
@@ -212,14 +235,14 @@ body{
 }
 
 .train-line{
-    margin: 0px -15px 0px;
+    margin: 0px 5px 0px;
 }
 
 /*---------------  FARE INFORMATION ---------------- */
 #fare{
     display: flex;
-    flex-direction: row;
-    margin: -10px;
+    flex-direction: column;
+    margin: 20px;
 
 }
 .fare-frame{
@@ -229,6 +252,7 @@ body{
     flex-direction: column;
     justify-content: center;
 }
+
 .fare-label{
     width: 100px;
     height: 40px;
@@ -243,9 +267,11 @@ body{
     font-weight: 600;
 }
 
-#time{
-    align-self: center;
-    margin: 0 30px;
+#fare .row1{
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    align-items: flex-end;
 }
 
 .StoredValueLabel{
@@ -259,40 +285,47 @@ body{
     font-weight: 400;
 }
 
-.beep, .single-journey{
+#beep, #single-journey{
     color: rgba(0, 0, 0, 1);
     border: none;
     font-size: 10px;
     font-style: Regular;
-    text-align: left;
+    text-align: center;
     font-family: Lexend Exa;
-    padding: 6px 20px;
+    padding: 1px 1px;
     overflow: hidden;
     border-radius: 21px;   
 }
 
-.beep{
-    height: 30px;
-    width: 70px;
+#beep{
+    height: 25px;
+    width: 110px;
+    background-color: rgba(133, 138, 134, 1);
+    transition: background-color 0.3s;
+}
+
+#beep:focus,
+#beep:hover {
+    background-color: rgb(87, 70, 195);
+}
+
+#single-journey{
+    height: 25px;
+    width: 110px;
     background-color: rgba(133, 138, 134, 1);
 }
 
-.beep:hover{
-    background-color: aqua;
-}
-
-.single-journey{
-    height: 30px;
-    width: 140px;
-    background-color: rgba(133, 138, 134, 1);
-}
-
-.single-journey:hover{
-    background-color: rgba(28, 194, 73, 1);
+#single-journey:focus,
+#single-journey:hover {
+    background-color:  rgba(28, 194, 73, 1);
 }
 
 .fare-options{
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
+    margin-top: 40px;
     row-gap: 10px;
+    justify-content:right;
+}
 }
