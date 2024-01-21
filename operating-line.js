@@ -1,5 +1,11 @@
 function getLocationPoints(){
-    document.getElementsByClassName("textbox");
+    var departure_value = document.getElementById("departure").value;
+    var arrival_value = document.getElementById("arrival").value;
+
+    document.getElementById("departure-label").textContent = departure_value;
+    document.getElementById("arrival-label").textContent = arrival_value;
+
+    checkInputAndShowResults();
 }
 
 function interchangeLocation() {
@@ -10,6 +16,32 @@ function interchangeLocation() {
     document.getElementById("departure").value = arrival_value;
     document.getElementById("arrival").value = temp;
 
+}
+
+function fareValue(button){ /** change the value of the fares according to the fare matrix */
+    var fare_option = button.id;
+    var fare_value = 0;
+
+    if (fare_option == "beep") {
+        fare_value = 20;        /* Example only */
+    } else if (fare_option == "single-journey") {
+        fare_value = 18;        /* Example only */
+    }
+    
+    document.getElementsByClassName("fare-label")[0].innerText = "₱" + fare_value;
+}
+
+function checkInputAndShowResults() {
+    var departure_value = document.getElementById("departure").value;
+    var arrival_value = document.getElementById("arrival").value;
+    var resultSection = document.querySelector(".result-section");
+
+    if (departure_value.trim() !== "" && arrival_value.trim() !== "") {
+        resultSection.classList.remove("hidden");
+    } 
+    else {
+        resultSection.classList.add("hidden");
+    }
 }
 
 function toggleSidebar() {
