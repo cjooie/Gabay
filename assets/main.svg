@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 700" width="100%" height="100%" fill="none">
+	<style>
+		@font-face {
+			  font-family: 'League Spartan';
+			  font-style: normal;
+			  font-weight: 400;
+			  font-display: swap;
+			  src: url(https://fonts.gstatic.com/s/leaguespartan/v11/kJEqBuEW6A0lliaV_m88ja5TwvZwLZk.woff2) format('woff2');
+			  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+			}
+		text{
+				font-family: "League Spartan";
+				font-size: 10px;
+				fill: black;
+			}
+		#LRT1 circle{
+				r: 5;
+				fill: #53CC05
+			}
+		#MRT3 circle{
+				r: 5;
+				fill: #E5BA03
+			}
+		#LRT2 circle{
+				r: 5;
+				fill: #9202CE
+			}
+		#options rect{
+				y: 625;
+				width: 120;
+				height: 40;
+				rx: 20;
+				fill: #FAFAFA;
+				stroke-width: 5;
+			}
+	</style>
+	
+	<rect x="144" y="283" width="20" height="42" rx="8" transform="rotate(90 151 283)" fill="#484848"/>
+	<rect x="142.5" y="284.5" width="17" height="39" rx="6.5" transform="rotate(90 149.5 284.5)" fill="#484848" stroke="white"/>
+	<rect x="120" y="641" width="20" height="42" rx="8" transform="rotate(90 151 641)" fill="#484848"/>
+	<rect x="118.5" y="642.5" width="17" height="39" rx="6.5" transform="rotate(90 149.5 642.5)" fill="#484848" stroke="white"/>
+	<rect x="502" y="198" width="20" height="42" rx="8" fill="#484848"/>
+	<rect x="503.5" y="199.5" width="17" height="39" rx="6.5" fill="#484848" stroke="white"/>
+	
+	<g id = "LRT1">
+		<path xmlns="http://www.w3.org/2000/svg" d="M400 43H146.054C130.624 43 118 55.5117 118 70.8037V656.618" stroke="#53CC05" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+		<rect xmlns="http://www.w3.org/2000/svg" x="60" y="20" width="36" height="13" rx="6.5" fill="#53CC05"/>
+		<text x="67" y="29" style = "font-size: 8; font-weight: bold; fill: white">LRT - 1</text>
+		<text x="400" y="25" text-anchor="middle">Fernando Poe Jr.</text>
+		<circle cx= "400" cy="43"/>
+		<text x="290" y="25" text-anchor="middle">Balintawak</text>
+		<circle cx= "290" cy="43"/>
+		<text x="180" y="25" text-anchor="middle">Monumento</text>
+		<circle cx= "180" cy="43"/>
+		<text x="100" y="69" text-anchor="end">5th Avenue</text>
+		<circle cx= "118" cy="66"/>
+		<text x="100" y="105" text-anchor="end">R. Papa</text>
+		<circle cx= "118" cy="102"/>
+		<text x="100" y="142" text-anchor="end">Abad Santos</text>
+		<circle cx= "118" cy="139"/>
+		<text x="100" y="179" text-anchor="end">Blumentritt</text>
+		<circle cx= "118" cy="176"/>
+		<text x="100" y="216" text-anchor="end">Bambang</text>
+		<circle cx= "118" cy="213"/>
+		<text x="100" y="253" text-anchor="end">Tayuman</text>
+		<circle cx= "118" cy="250"/>
+		<text x="100" y="290" text-anchor="end">Doroteo Jose</text>
+		<circle cx= "118" cy="287"/>
+		<text x="100" y="327" text-anchor="end">Carriedo</text>
+		<circle cx= "118" cy="324"/>
+		<text x="100" y="364" text-anchor="end">Central Terminal</text>
+		<circle cx= "118" cy="361"/>
+		<text x="100" y="401" text-anchor="end">United Nations</text>
+		<circle cx= "118" cy="398"/>
+		<text x="100" y="438" text-anchor="end">Pedro Gil</text>
+		<circle cx= "118" cy="435"/>
+		<text x="100" y="475" text-anchor="end">Quirino</text>
+		<circle cx= "118" cy="472"/>
+		<text x="100" y="512" text-anchor="end">Vito Cruz</text>
+		<circle cx= "118" cy="509"/>
+		<text x="100" y="549" text-anchor="end">Gil Puyat</text>
+		<circle cx= "118" cy="546"/>
+		<text x="100" y="586" text-anchor="end">Libertad</text>
+		<circle cx= "118" cy="583"/>
+		<text x="100" y="623" text-anchor="end">EDSA</text>
+		<circle cx= "118" cy="620"/>
+		<text x="100" y="661" text-anchor="end">Baclaran</text>
+		<circle cx= "118" cy="657"/>
+	</g>
+
+	<g id="MRT3">
+		<path xmlns="http://www.w3.org/2000/svg" d="M511.569 54L511.569 570.885C512 600.432 480.212 620.152 450.407 619.152L139 620" stroke="#E5BA03" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+		<rect xmlns="http://www.w3.org/2000/svg" x="530" y="625" width="36" height="13" rx="6.5" fill="#E5BA03"/>
+		<text x="535.5" y="634" style = "font-size: 8; font-weight: bold; fill: white">MRT - 3</text>
+		<text x="530" y="57" text-anchor="start">North Avenue</text>
+		<circle cx= "511.5" cy="55"/>
+		<text x="530" y="110" text-anchor="start">Quezon Avenue</text>
+		<circle cx= "511.5" cy="107"/>
+		<text x="530" y="160" text-anchor="start">Kamuning</text>
+		<circle cx= "511.5" cy="157"/>
+		<text x="530" y="225" text-anchor="start">Araneta Center-</text>
+		<text x="530" y="235" text-anchor="start">Cubao</text>
+		<circle cx= "511.5" cy="232"/>
+		<text x="530" y="290" text-anchor="start">Santolan</text>
+		<circle cx= "511.5" cy="287"/>
+		<text x="530" y="350" text-anchor="start">Ortigas</text>
+		<circle cx= "511.5" cy="347"/>
+		<text x="530" y="410" text-anchor="start">Shaw</text>
+		<circle cx= "511.5" cy="407"/>
+		<text x="530" y="470" text-anchor="start">Boni</text>
+		<circle cx= "511.5" cy="467"/>
+		<text x="530" y="530" text-anchor="start">Guadalupe</text>
+		<circle cx= "511.5" cy="527"/>
+		<text x="530" y="585" text-anchor="start">Buendia</text>
+		<circle cx= "510.5" cy="581"/>
+		<text x="430" y="644" text-anchor="middle">Ayala</text>
+		<circle cx= "430" cy="620"/>
+		<text x="285" y="644" text-anchor="middle">Magallanes</text>
+		<circle cx= "285" cy="620"/>
+		<text x="150" y="644" text-anchor="middle">Taft Avenue</text>
+		<circle cx= "140" cy="620"/>
+	</g>
+
+	<g id="LRT2">
+		<path xmlns="http://www.w3.org/2000/svg" d="M138.941 285.5L331.462 285.5C346.453 285.205 358.247 278.186 357.967 263.676L357.227 232.305C356.947 217.795 368.875 205.791 383.867 205.496L846.498 205.496" stroke="#9202CE" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+		<rect xmlns="http://www.w3.org/2000/svg" x="830" y="230" width="36" height="13" rx="6.5" fill="#9202CE"/>
+		<text x="836" y="239" style = "font-size: 8; font-weight: bold; fill: white">LRT - 2</text>
+		<text x="140" y="268" text-anchor="middle">Recto</text>
+		<circle cx= "140" cy="285"/>
+		<text x="200" y="268" text-anchor="middle">Legarda</text>
+		<circle cx= "200" cy="285"/>
+		<text x="260" y="268" text-anchor="middle">Pureza</text>
+		<circle cx= "260" cy="285"/>
+		<text x="320" y="268" text-anchor="middle">V. Mapa</text>
+		<circle cx= "320" cy="285"/>
+		<text x="330" y="235" text-anchor="middle">J. Ruiz</text>
+		<circle cx= "357.5" cy="232"/>
+		<text x="385" y="185" text-anchor="middle">Gilmore</text>
+		<circle cx= "385" cy="205"/>
+		<text x="450" y="175" text-anchor="middle">Betty-Go</text>
+		<text x="450" y="185" text-anchor="middle">Belmonte</text>
+		<circle cx= "450" cy="205"/>
+		<circle cx= "512" cy="206"/>
+		<text x="580" y="185" text-anchor="middle">Anonas</text>
+		<circle cx= "580" cy="205"/>
+		<text x="645" y="185" text-anchor="middle">Katipunan</text>
+		<circle cx= "645" cy="205"/>
+		<text x="710" y="185" text-anchor="middle">Santolan</text>
+		<circle cx= "710" cy="205"/>
+		<text x="775" y="185" text-anchor="middle">Marikina</text>
+		<circle cx= "775" cy="205"/>
+		<text x="842" y="185" text-anchor="middle">Antipolo</text>
+		<circle cx= "845" cy="205"/>
+	</g>
+	<rect x="1067" y="117" width="280" height="400" rx="27" ry="27" fill="#fafafa" stroke="#dfdfe5" stroke-width="2" />
+	<text x="1120" y="230" text-anchor="start" style="font-size: 20; letter-spacing:1.3px">Select any from the</text>
+	<text x="1120" y="250" text-anchor="start" style="font-size: 20; letter-spacing:1.3px">train lines to view</text>
+	<text x="1120" y="270" text-anchor="start" style="font-size: 20; letter-spacing:1.3px">more information</text>
+
+	<rect xmlns="http://www.w3.org/2000/svg" x="881" y="600" width="531" height="98" rx="40" fill="#FFFFFF" stroke="#FAFAFA" stroke-width="2"/>
+	<g id="options">
+		<a href="lrt1.svg">
+			<rect x="910" width="120" height="40" rx="20" fill="#53CC05" stroke="#53CC05" stroke-width="5"/>
+			<text x="970" y="650" text-anchor="middle" style="font-size: 15; font-weight: semi-bold; fill: #53CC05">L R T - 1</text>
+		</a>
+		<a href="lrt2.svg">
+			<rect x="1050" width="120" height="40" rx="20" fill="#9202CE" stroke="#9202CE" stroke-width="5"/>
+			<text x="1110" y="650" text-anchor="middle" style="font-size: 15; font-weight: semi-bold; fill:#9202CE">L R T - 2</text>
+		</a>
+		<a href="mrt3.svg">
+			<rect x="1190" width="120" height="40" rx="20" fill="#E5BA03" stroke="#E5BA03" stroke-width="5"/>
+			<text x="1250" y="650" text-anchor="middle" style="font-size: 15; font-weight: semi-bold; fill:#E5BA03">M R T - 3</text>
+		</a>
+		<a href="main.svg">
+			<rect xmlns="http://www.w3.org/2000/svg" style= "x:1340; y: 625; width:32; height:40; rx:5; fill:black"/>
+			<rect xmlns="http://www.w3.org/2000/svg" style= "x:1350; y:624; width:4; height:2; rx:1; fill:black"/>
+			<rect xmlns="http://www.w3.org/2000/svg" style="x:1358; y:624; width:4; height:2; rx:1; fill:black"/>
+			<rect xmlns="http://www.w3.org/2000/svg" style="x:1352; y:627; width:8; height:1.5; rx:0; fill:white"/>
+			<rect xmlns="http://www.w3.org/2000/svg" style="x:1345; y:632; width:22; height:15; rx:3; fill:white"/>
+			<circle cx="1348" cy="658" style="r:2.5; fill: white"/>
+			<circle cx="1364" cy="658" style="r:2.5; fill: white"/>
+			<line x1="1342" y1="670" x2="1348" y2="663" stroke="black" stroke-width="2"/>
+			<line x1="1370" y1="670" x2="1364" y2="663" stroke="black" stroke-width="2"/>
+		</a>
+	</g>
+
+</svg>
+
+

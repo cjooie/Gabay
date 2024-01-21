@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 700" width="100%" height="100%" fill="none">
+	<style>
+		@font-face {
+			  font-family: 'League Spartan';
+			  font-style: normal;
+			  font-weight: 400;
+			  font-display: swap;
+			  src: url(https://fonts.gstatic.com/s/leaguespartan/v11/kJEqBuEW6A0lliaV_m88ja5TwvZwLZk.woff2) format('woff2');
+			  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+			}
+		text{
+				font-family: "League Spartan";
+				font-size: 10px;
+				fill: black;
+			}
+		path{
+                stroke: #E5BA03;
+                stroke-width: 5;
+				stroke-linecap: "round";
+				stroke-linejoin: "round"
+            }
+		circle{
+				r: 5;
+				fill: #E5BA03
+			}
+	</style>
+	
+	<path xmlns="http://www.w3.org/2000/svg" d="M511.569 54L511.569 570.885C512 600.432 480.212 620.152 450.407 619.152L139 620"/>
+	<rect xmlns="http://www.w3.org/2000/svg" x="530" y="625" width="36" height="13" rx="6.5" fill="#E5BA03"/>
+	<text x="535.5" y="634" style = "font-size: 8; font-weight: bold; fill: white">MRT - 3</text>
+	<text x="530" y="57" text-anchor="start">North Avenue</text>
+	<circle cx= "511.5" cy="55"/>
+	<text x="530" y="110" text-anchor="start">Quezon Avenue</text>
+	<circle cx= "511.5" cy="107"/>
+	<text x="530" y="160" text-anchor="start">Kamuning</text>
+	<circle cx= "511.5" cy="157"/>
+	<text x="530" y="225" text-anchor="start">Araneta Center-</text>
+	<text x="530" y="235" text-anchor="start">Cubao</text>
+	<circle cx= "511.5" cy="232"/>
+	<text x="530" y="290" text-anchor="start">Santolan</text>
+	<circle cx= "511.5" cy="287"/>
+	<text x="530" y="350" text-anchor="start">Ortigas</text>
+	<circle cx= "511.5" cy="347"/>
+	<text x="530" y="410" text-anchor="start">Shaw</text>
+	<circle cx= "511.5" cy="407"/>
+	<text x="530" y="470" text-anchor="start">Boni</text>
+	<circle cx= "511.5" cy="467"/>
+	<text x="530" y="530" text-anchor="start">Guadalupe</text>
+	<circle cx= "511.5" cy="527"/>
+	<text x="530" y="585" text-anchor="start">Buendia</text>
+	<circle cx= "510.5" cy="581"/>
+	<text x="430" y="644" text-anchor="middle">Ayala</text>
+	<circle cx= "430" cy="620"/>
+	<text x="285" y="644" text-anchor="middle">Magallanes</text>
+	<circle cx= "285" cy="620"/>
+	<text x="150" y="644" text-anchor="middle">Taft Avenue</text>
+	<circle cx= "140" cy="620"/>
+
+
+	<rect x="1067" y="117" width="280" height="400" rx="27" ry="27" fill="#fafafa" stroke="#dfdfe5" stroke-width="2" />
+	<text x="1205" y="170" text-anchor="middle" style = "font-size: 20">Manila Metro Rail Transit 3</text>
+	<rect xmlns="http://www.w3.org/2000/svg" x="1175" y="185" width="69" height="17" rx="10" fill="#E5BA03" stroke="#E5BA03" stroke-width="2"/>
+	<text x="1211" y="198" text-anchor="middle" style = "font-size: 15; font-weight: semi-bold; fill:black">M R T - 3</text>
+	<text x="1211" y="225" text-anchor="middle" style = "font-size: 10; fill: black; letter-spacing: 1px;">NUMBER OF STATIONS: 13</text>
+	<path xmlns="http://www.w3.org/2000/svg" d="M1170 255 H1250" style = "stroke-width: 3"/>
+	<circle cx= "1170" cy="255" style = "r:4"/>
+	<circle cx= "1250" cy="255" style = "r:4"/>
+	<text x="1147" y="275" text-anchor="start" style="font-size: 9">North Avenue</text>
+	<text x="1154" y="290" text-anchor="start" style="font-size: 8; font-weight: bold">FIRST STOP</text>
+	<text x="1232" y="275" text-anchor="start" style="font-size: 9">Taft Avenue</text>
+	<text x="1237" y="290" text-anchor="start" style="font-size: 8; font-weight: bold">LAST STOP</text>
+	<text x="1211" y="325" text-anchor="middle" style="letter-spacing: 2px">OPERATING HOURS</text>
+	<text x="1211" y="335" text-anchor="middle" style="font-size: 8; letter-spacing: 1.5px; fill: #AEAEAE">*may vary based on</text>
+	<text x="1211" y="343" text-anchor="middle" style="font-size: 8; letter-spacing: 1.5px; fill: #AEAEAE">given advisories</text>
+	
+	<text x="1211" y="380" text-anchor="middle" style="font-size: 14; letter-spacing: 1.5px">Monday to Friday</text>
+	<text x="1211" y="405" text-anchor="middle" style="font-size: 14; letter-spacing: 1.5px">4:59 AM - 9:10 PM</text>
+	<text x="1211" y="445" text-anchor="middle" style="font-size: 14; letter-spacing: 1.5px">Saturday and Sunday</text>
+	<text x="1211" y="470" text-anchor="middle" style="font-size: 14; letter-spacing: 1.5px">12:00 AM - 11:00 PM</text>
+
+	<rect xmlns="http://www.w3.org/2000/svg" x="881" y="600" width="531" height="98" rx="40" fill="#FFFFFF" stroke="#FAFAFA" stroke-width="2"/>
+	<a href="lrt1.svg">
+		<rect xmlns="http://www.w3.org/2000/svg" x="910" y="625" width="120" height="40" rx="20" fill="#FAFAFA" stroke="#53CC05" stroke-width="5"/>
+		<text x="970" y="650" text-anchor="middle" style = "font-size: 15; font-weight: semi-bold; fill:#53CC05">L R T - 1</text>
+	</a>
+	<a href="lrt2.svg">
+		<rect xmlns="http://www.w3.org/2000/svg" x="1050" y="625" width="120" height="40" rx="20" fill="#FAFAFA" stroke="#9202CE" stroke-width="5"/>
+		<text x="1110" y="650" text-anchor="middle" style = "font-size: 15; font-weight: semi-bold; fill:#9202CE">L R T - 2</text>
+	</a>
+	<a href="mrt3.svg">
+		<rect xmlns="http://www.w3.org/2000/svg" x="1190" y="625" width="120" height="40" rx="20" fill="#E5BA03" stroke="#E5BA03" stroke-width="5"/>
+		<text x="1250" y="650" text-anchor="middle" style = "font-size: 15; font-weight: semi-bold; fill:white">M R T - 3</text>
+	</a>
+	<a href="main.svg">
+		<rect xmlns="http://www.w3.org/2000/svg" x="1340" y="625" width="32" height="40" rx="5" fill ="black"/>
+		<rect xmlns="http://www.w3.org/2000/svg" x="1350" y="624" width="4" height="2" rx="1" fill ="black"/>
+		<rect xmlns="http://www.w3.org/2000/svg" x="1358" y="624" width="4" height="2" rx="1" fill ="black"/>
+		<rect xmlns="http://www.w3.org/2000/svg" x="1352" y="627" width="8" height="1.5" fill ="white"/>
+		<rect xmlns="http://www.w3.org/2000/svg" x="1345" y="632" width="22" height="15" rx="3" fill ="white"/>
+		<circle cx="1348" cy="658" style="r:2.5; fill: white"/>
+		<circle cx="1364" cy="658" style="r:2.5; fill: white"/>
+		<line x1="1342" y1="670" x2="1348" y2="663" stroke="black" stroke-width="2"/>
+		<line x1="1370" y1="670" x2="1364" y2="663" stroke="black" stroke-width="2"/>
+	</a>
+
+</svg>
+
