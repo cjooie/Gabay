@@ -9,16 +9,16 @@
 <body>
     <div id="container">
         <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <div class="section" id="search">
-                <div class="textbox" id="departure"> DEPARTURE </div>
-                <div class="textbox" id="arrival"> ARRIVAL </div>
+                <input type="text" class="textbox" id="departure" placeholder="DEPARTURE">
+                <input type="text" class="textbox" id="arrival" placeholder="ARRIVAL">
                 <img
                     class ="btn-interchange"
                     src="assets/interchange-icon.svg"
                     alt="Interchange departure and arrival location icon"
+                    onclick="interchangeLocation()"
                 />
-                <button class="btn-search"> SEARCH </button>
+                <button class="btn-search" onclick="getLocationPoints()"> SEARCH </button>
             </div>
             <div id="section-result"> SEARCH RESULTS </div>
             <div class="section" id="result">
@@ -62,8 +62,8 @@
         </div>
         <div id="map">
             <iframe
-            width="600"
-            height="450"
+            width="1440"
+            height="900"
             style="border:0"
             loading="lazy"
             allowfullscreen
@@ -71,9 +71,10 @@
             src="https://www.google.com/maps/embed/v1/place?key=
               &q=Space+Needle,Seattle+WA">
           </iframe>
-        <input type="checkbox" id="btnControl"/>
-        <img class="openbtn" for="btnConrtol" onclick="openNav()" src="assets/hidebar-icon.svg"/> </button> 
-        </div>
+          <input type="checkbox" id="btnControl" />
+          <label class="sidebar-btn" for="btnControl" onclick="toggleSidebar()">
+              <img class="icon" src="assets/hidebar-icon.svg" alt="Toggle sidebar button">
+          </label>
     </div>
     <script src="./operating-line.js"></script>
 </body>

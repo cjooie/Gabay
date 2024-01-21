@@ -53,6 +53,7 @@ body{
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 1);
     font-family: League Spartan;
+    font-size: 15px;
     font-weight: 400;
     width: 350px;
     height: 32px;
@@ -93,36 +94,25 @@ body{
     background-color: rgba(0, 0, 0, 1);
 }
 
-.sidebar .closebtn {
-    position: absolute;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+.sidebar-btn {
+    width: 40px;
+    height: 40px;
+    margin: 90px 200px 10px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.openbtn {
-    width:40px;
-    height:40px;
-    margin:10px 200px 10px 10px;
-    border-color: #ffffff;
-    color: #ffffff;
-    border-radius: 20%;
-    font-family: "Lato", sans-serif;
-    font-size: 30px;
-    cursor: pointer;
-}
-  
-.openbtn:hover {
-    background-color: #444;
+.icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
 #btnControl {
     display: none;
-}
-
-#btnControl:checked + label{
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 
 #map{
@@ -168,7 +158,6 @@ body{
     text-align: left;
     font-family: Lexend Exa;
     font-weight: 600;
-    background-color: rgb(27, 147, 147);
 }
 
 #time{
@@ -176,7 +165,6 @@ body{
     font-style: SemiBold;
     text-align: left;
     font-family: "League Spartan";
-    background-color: rgb(2, 53, 53);
 }
 
 #stations{
