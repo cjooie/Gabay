@@ -1,0 +1,61 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 90%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.train-redirect-link{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  width: 200px;
+  transition: 0.3s
+}
+
+.train-redirect-link:hover{
+  background-color: rgb(198, 198, 198);
+  opacity: 0.5;
+  color: black;
+}
+
+.train-text {
+  font-family: "League Spartan";
+  font-optical-sizing: auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+header {
+  margin-top: -80px;
+  z-index: 100;
+}
+
+.svg-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.svg-container object {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 88%;
+}
+.svg-container object:nth-child(1) {
+  z-index: 2;
+}
+
+.svg-container object:nth-child(2) {
+  z-index: 1;
+  opacity: 0.2; 
+}

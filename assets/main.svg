@@ -35,6 +35,8 @@
 			}
 	</style>
 	
+	<rect x="501" y="32" width="20" height="35" rx="8" fill="#484848" stroke= "white"/>
+	<rect x="502.5" y="33.5" width="17" height="32" rx="6.5" fill="#484848" stroke="white"/>
 	<rect x="144" y="283" width="20" height="42" rx="8" transform="rotate(90 151 283)" fill="#484848"/>
 	<rect x="142.5" y="284.5" width="17" height="39" rx="6.5" transform="rotate(90 149.5 284.5)" fill="#484848" stroke="white"/>
 	<rect x="120" y="641" width="20" height="42" rx="8" transform="rotate(90 151 641)" fill="#484848"/>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/ico" href="../assets/logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/operating-line.css" rel="stylesheet">
+
+    <title>Operating Line</title>
+
+    <header>
+        <img id="logo" href="index.html" src="../assets/Gabay-Logo-Black.png">
+        <a class="op-redirect-link" href="index.html"><p class="header-text">Home</p></a>
+        <a class="op-redirect-link" href="train-line.html"><p class="header-text">Train Lines</p></a>
+        <a class="op-redirect-link" href="operating-line.html"><p class="header-text">Operating Lines</p></a>
+        <a class="op-redirect-link" href="about-us.html"><p class="header-text">About Us</p></a>
+    </header>
+
+</head>
+<body>
+    <div id="container">
+        <div id="mySidebar" class="sidebar">
+            <div class="section" id="search">
+                <input type="text" class="textbox" id="departure" placeholder="DEPARTURE">
+                <input type="text" class="textbox" id="arrival" placeholder="ARRIVAL">
+                <img
+                    class ="btn-interchange"
+                    src="../assets/interchange-icon.svg"
+                    alt="Interchange departure and arrival location icon"
+                    onclick="interchangeLocation();"
+                />
+                <button id="btn-search" class="btn-search"> SEARCH </button>
+            </div>
+
+            <div class="result-label"> SEARCH RESULTS </div>
+
+            <div class="result-section js-result-panel" id="result">
+                <div></div>
+            </div>
+        </div>
+
+        <div id="map-placeholder" class="map-placeholder-style">
+            <input type="checkbox" id="btnControl" class="sidebar-button"/>
+            <label class="sidebar-btn" for="btnControl" onclick="toggleSidebar()">
+                <img class="icon" src="../assets/hidebar-icon.svg" alt="Toggle sidebar button">
+            </label>
+            <div id="map">
+            </div>
+    </div>
+</div>
+    <script src="../scripts/operating-line.js"></script>
+    <script type="text/javascript" src="../scripts/map.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script>
+        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+            key: "AIzaSyCx9wFA1emdhppIX5mnJ_4fadwjBJff0Qg",
+            v: "weekly",
+          });
+          
+        initMap();
+    </script>
+</body>
+</html>

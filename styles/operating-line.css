@@ -1,46 +1,107 @@
-@media screen and (max-width: 720px){
-body{
+@font-face { font-family: League Spartan; src: url('../fonts/LeagueSpartan-VariableFont_wght.ttf'); }
+@font-face { font-family: Lexend Exa; src: url('../fonts/Lexend-VariableFont_wght.ttf'); } 
+
+#map {
+    height: 100%;
+    margin-top: -85px;
+  }
+ 
+.map-container {
+    height: 80%;
+}
+  
+body, header{
     margin: 0px;
     padding: 0px;
+    font-family: League Spartan;
 }
 
-#container{
-    height: 100vh;
-    max-width: 720px;
-    display: flex;
-    flex-direction: column;
-    flex-flow: column-reverse;
-    
-}
-
-#map{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    height: 500vh;
-    transition: margin-left .5s;
-}
-
-#mySidebar{
-    display: flex;
-    flex-direction: column;
-    flex-flow: column-reverse;
-}
-.sidebar{
-    height: 0;
-    position: relative;
+body {
     overflow: hidden;
-    margin-bottom: auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(5, 5, 5);
+    color: white;
+    height: 80px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    margin-top: -80px;
+}
+
+#logo{
+    height:60%;
+}
+
+.op-redirect-link  {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    width: 200px;
+    transition: 0.3s
+  }
+
+.op-redirect-link:hover {
+    background-color: rgb(198, 198, 198);
+    opacity: 0.5;
+    color: black;
+  }
+
+.header-text{
+    font-family: "League Spartan";
+    font-optical-sizing: auto;
+    font-size: 20px;
+    text-align: center;
+  }
+
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+} 
+
+a {
+    color:white;
+    font-family: Lexend Exa;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#container {
+    display: flex;
+    margin-top: 80px;
+}
+
+#map {
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
     transition: 0.5s;
-    z-index: 2;
+    padding-top: 0px;
+    margin-top: 80px;
 }
 
 .sidebar a{
-    color: white;
-    padding: 14px 16px;
+    padding: 8px 8px 100px 32px;
     text-decoration: none;
-    font-size: 17px;
-    display: flex;
+    font-size: 25px;
+    display: block;
     transition: 0.3s;
 }
   
@@ -48,17 +109,8 @@ body{
     color: #f1f1f1;
 }
 
-.result-section{
-    display: flex;
-    box-shadow: inset 3px 4px 5px #f5f4f4;
-}
-
-.result-section.hidden{
-    display: none;
-}
-
 #search{
-    height: 50%;
+    height: 32%;
 }
 
 .textbox{
@@ -67,38 +119,44 @@ body{
     border-width: 1px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 1);
-    font-family: League Spartan;
+    font-family: Lexend Exa;
     font-size: 15px;
     font-weight: 400;
-    width: 30vh;
+    width: 350px;
     height: 32px;
-    padding: 9px 14px;    
+    display: flex;
+    padding: 9px 14px;
+    position: absolute;
+    align-items: center;
 }
 
-
 #departure{
-    margin: 0px 0px 0px 90px;
-    align-self: center;
+    margin: 40px 20px;
+    gap: 8px;
+    top: 0px;
+    left: 0px;
 }
 
 #arrival{
-    margin: 0px 0px 0px 90px;
-    align-self: center;
+    margin: 40px 20px;
+    gap: 8px;
+    top: 60px;
+    left: 0px;
 }
 
 .btn-interchange{
-    padding-bottom: 20px;
+    margin: 80px 410px;
 }
 
 .btn-search{
+    margin: -30px 300px;
     color: rgba(255, 255, 255, 1);
     font-size: 10px;
     font-family: Lexend Exa;
     font-weight: 400;
     text-decoration: none;
-    margin: 10px 110px;
-    width: 30vh;
-    height: 60px;
+    width: 100px;
+    height: 40px;
     border-radius: 50px;
     background-color: rgba(0, 0, 0, 1);
 }
@@ -106,10 +164,15 @@ body{
 .sidebar-btn {
     width: 40px;
     height: 40px;
-    margin: 20px;
+    margin: 15px 20px 10px 10px;
     cursor: pointer;
     display: flex;
-    align-self: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    position: fixed;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .icon {
@@ -117,13 +180,27 @@ body{
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
-    transform: rotateY(90);
+
 }
 
 #btnControl {
     display: none;
 }
 
+#map-placeholder{
+    height: 0vh;
+    transition: margin-left .5s;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.map-size {
+    height: 50%;
+    width: 80%;
+}
 
 /* -------------------------- RESULT -----------------------------*/
 
@@ -138,19 +215,28 @@ body{
     font-family: Lexend Exa;
     font-weight: 400;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 320px;
 }
 
 .result-section{
+    box-shadow: inset 3px 4px 5px #f5f4f4;
     padding: 10px 5px;
     font-size: 12px;
     font-family: Lexend Exa;
     font-weight: 400;
-    height: 400px; /* Set a fixed height for scrollability */
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: hidden ;
+    display: grid;
+ 
 }
 
-#distance-time-station{
+#distance-time-stations{
+    display: block;
+    flex-direction: row;
+}
+
+.distance-time-fare-container {
     display: flex;
     flex-direction: row;
 }
@@ -241,8 +327,8 @@ body{
 /*---------------  FARE INFORMATION ---------------- */
 #fare{
     display: flex;
-    flex-direction: column;
-    margin: 20px;
+    flex-direction: row;
+    margin: -10px;
 
 }
 .fare-frame{
@@ -260,11 +346,12 @@ body{
     overflow: hidden;
     position: relative;
     color: rgb(0, 0, 0);
-    font-size: 25px;
+    font-size: 30px;
     font-style: SemiBold;
     text-align: left;
     font-family: "Lexend Exa";
     font-weight: 600;
+    justify-content: flex-end;
 }
 
 #fare .row1{
@@ -285,7 +372,7 @@ body{
     font-weight: 400;
 }
 
-#beep, #single-journey{
+.beep, .single-journey{
     color: rgba(0, 0, 0, 1);
     border: none;
     font-size: 10px;
@@ -297,35 +384,60 @@ body{
     border-radius: 21px;   
 }
 
-#beep{
+.beep{
     height: 25px;
     width: 110px;
     background-color: rgba(133, 138, 134, 1);
     transition: background-color 0.3s;
 }
 
-#beep:focus,
-#beep:hover {
+.beep:focus,
+.beep:hover {
     background-color: rgb(87, 70, 195);
 }
 
-#single-journey{
+.single-journey{
     height: 25px;
     width: 110px;
     background-color: rgba(133, 138, 134, 1);
 }
 
-#single-journey:focus,
-#single-journey:hover {
+.single-journey:focus,
+.single-journey:hover,
+.single-journey.active {
     background-color:  rgba(28, 194, 73, 1);
 }
 
 .fare-options{
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 5px;
     margin-top: 40px;
     row-gap: 10px;
     justify-content:right;
 }
+
+@media screen and (max-width: 720px){
+
 }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
