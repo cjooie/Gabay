@@ -1,0 +1,136 @@
+@font-face { font-family: Akira Expanded; src: url('../fonts/Akira-Expanded.otf'); } 
+
+body{
+    background-color: #0A0808;
+    height: 1440px;
+    margin: 0;
+    padding: 0;
+}
+
+.index-redirect-link{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    width: 200px;
+    transition: 0.3s
+  }
+  
+.index-redirect-link:hover{
+    background-color: rgb(198, 198, 198);
+    opacity: 0.5;
+    color: black;
+  }
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(5, 5, 5);
+    color: white;
+    height: 80px;
+}
+
+header {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.header-text {
+    font-family: "League Spartan";
+    font-optical-sizing: auto;
+    font-size: 20px;
+    text-align: center;
+  }
+
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+} 
+
+a {
+    color:white;
+    font-family: Lexend Exa;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#logo{
+    height:60%;
+}
+
+p{
+    color:white;
+}
+
+.body{
+    font-family: League Spartan;
+    font-size: 20px;
+}
+
+.body#dev{
+    padding-left: 50px;
+}
+
+.body#description{
+    width: 600px;
+    word-spacing: 3px;
+    line-height: 30px;
+    padding-top: 70px;
+    padding-left: 375px;
+}
+
+.heading{
+    font-family: Akira Expanded;
+    font-size: 40px;
+}
+
+.heading#vision{
+    margin-top: 100px;
+    margin-left: 500px;
+    width: 500px;
+    text-shadow: 0 0 10px #5a5a5a;
+}
+
+#about{
+    margin-top: 100px;
+    text-shadow: 0 0 10px #5a5a5a;
+}
+
+#vm-card{
+    padding-top: 50px;
+    padding-left: 100px;
+    display: flex;
+    text-align: center;
+}
+
+.body#vm{
+    padding-top: 10px;
+    padding: 20px;
+    width: 400px;
+    line-height: 30px;
+    border: 5px solid #E5BA03;
+    border-radius: 20px;
+}
+
+.heading, .body{
+    margin-left: 150px;
+}
+
+#content{
+    background-image: url("../assets/about-bg.png");
+    height: auto;
+    width: 100%;
+    position: absolute;
+    
+}
+
+#divider{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
