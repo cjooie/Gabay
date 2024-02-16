@@ -4,27 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/ico" href="../assets/logo.ico">
-    <link href="../styles/landing-page.css" rel="stylesheet">
-    <link href="../styles/train-line-style.css" rel="stylesheet">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <script src="../scripts/train-line.js"></script>
+
+    <link href="../styles/train-line.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Train Line</title>
 
-    <header>
-        <img id="logo" href="index.html" src="../assets/Gabay-Logo-Black.png">
-        <a class="train-redirect-link" href="index.html"><p class="header-text">Home</p></a>
-        <a class="train-redirect-link" href="train-line.html"><p class="header-text">Train Lines</p></a>
-        <a class="train-redirect-link" href="operating-line.html"><p class="header-text">Operating Lines</p></a>
-        <a class="train-redirect-link" href="about-us.html"><p class="header-text">About Us</p></a>
-    </header>
- 
+    <header class ="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>  
+    
+            <div class="menu-items">
+                <a id="logo" href="index.html"><img id="logo-inner" src="../assets/Gabay-Logo-Black.png"></a>
+                <a class="train-redirect-link" href="index.html"><p class="header-text">Home</p></a>
+                <a class="train-redirect-link" href="train-line.html"><p class="header-text">Train Lines</p></a>
+                <a class="train-redirect-link" href="operating-line.html"><p class="header-text">Operating Lines</p></a>
+                <a class="train-redirect-link" href="about-us.html"><p class="header-text">About Us</p></a>
+            </div>
+        </div>
+    </header> 
+    
 </head>
+
 <body>
     <div class="svg-container">
-        <object type="image/svg+xml" data="../assets/main.svg"></object>
-        <object type="image/svg+xml" data="../assets/main.svg"></object>
+        <object id="desktop"type="image/svg+xml" data="../assets/main.svg"></object>
+        <object id="desktop"type="image/svg+xml" data="../assets/main.svg"></object>
+        <object id="mobile" type="image/svg+xml" data="../assets/main-m.svg"></object>
     </div>
 </body>
 </html>

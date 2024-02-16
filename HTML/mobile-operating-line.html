@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles/operating-line.css" rel="stylesheet">
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/ico" href="../../assets/logo.ico">
+    <link href="../styles/mobile-operating-line.css" rel="stylesheet">
 
     <title>Operating Line</title>
 
     <header class ="navbar">
         <div class="container nav-container">
-            <input class="checkbox" type="checkbox" name="" id="" />
+            <input class="checkbox" type="checkbox" id="hamburger-menu" onclick="hideBar()" />
             <div class="hamburger-lines">
                 <span class="line line1"></span>
                 <span class="line line2"></span>
@@ -19,15 +20,15 @@
     
             <div class="menu-items">
                 <a id="logo" href="index.html"><img id="logo-inner" src="../assets/Gabay-Logo-Black.png"></a>
-                <a class="op-redirect-link" href="index.html"><p class="header-text">Home</p></a>
-                <a class="op-redirect-link" href="train-line.html"><p class="header-text">Train Lines</p></a>
-                <a class="op-redirect-link" href="operating-line.html"><p class="header-text">Operating Lines</p></a>
-                <a class="op-redirect-link" href="about-us.html"><p class="header-text">About Us</p></a>
+                <a href="index.html"><p class="header-text">Home</p></a>
+                <a href="train-line.html"><p class="header-text">Train Lines</p></a>
+                <a href="mobile-operating-line.html"><p class="header-text">Operating Lines</p></a>
+                <a href="about-us.html"><p class="header-text">About Us</p></a>
             </div>
         </div>
     </header> 
+</head> 
 
-</head>
 <body>
     <div id="container">
         <div id="mySidebar" class="sidebar">
@@ -40,26 +41,24 @@
                     alt="Interchange departure and arrival location icon"
                     onclick="interchangeLocation();"
                 />
-                <button id="btn-search" class="btn-search"> SEARCH </button>
+                <button id="btn-search" class="btn-search" onclick="getLocationPoints()"> SEARCH </button>
             </div>
-
-            <div class="result-label"> SEARCH RESULTS </div>
 
             <div class="result-section js-result-panel" id="result">
                 <div></div>
             </div>
         </div>
-
-        <div id="map-placeholder" class="map-placeholder-style">
-            <input type="checkbox" id="btnControl" class="sidebar-button"/>
-            <label class="sidebar-btn" for="btnControl" onclick="toggleSidebar()">
-                <img class="icon" src="../assets/hidebar-icon.svg" alt="Toggle sidebar button">
-            </label>
-            <div id="map">
-            </div>
-    </div>
+        <input type="checkbox" id="btnControl" class="sidebar-button"/>
+        <label class="sidebar-btn" for="btnControl" onclick="toggleSidebar()">
+        <img class="icon" src="../assets/hidebar-icon.svg">
+        </label>
+        <div id="map">
+            <div id="map-placeholder" class="map-placeholder-style">
+        </div>
+        </div>
+    </div> 
 </div>
-    <script src="../scripts/operating-line.js"></script>
+    <script src="../scripts/mobile-operating-line.js"></script>
     <script type="text/javascript" src="../scripts/map.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
@@ -74,8 +73,8 @@
     </script>
     <script>
         $(window).on('load resize', function(){
-        if($(window).width() <= 360){
-            window.location.href = "mobile-operating-line.html";
+        if($(window).width() > 360){
+            window.location.href = "operating-line.html";
         }
     });
     </script>

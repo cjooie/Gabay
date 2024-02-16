@@ -2,23 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="../styles/landing-page.css" rel="stylesheet">
-    <link rel="icon" type="image/ico" href="../assets/logo.ico">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link href="../styles/index.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     
     <title>Gabay</title>
 
-    <header>
-        <img id="logo" href="index.html" src="../assets/Gabay-Logo-Black.png">
-        <a class="index-redirect-link" href="index.html"><p class="header-text">Home</p></a>
-        <a class="index-redirect-link" href="train-line.html"><p class="header-text">Train Lines</p></a>
-        <a class="index-redirect-link" href="operating-line.html"><p class="header-text">Operating Lines</p></a>
-        <a class="index-redirect-link" href="about-us.html"><p class="header-text">About Us</p></a>
-    </header>
+    <header class ="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>  
+
+            <div class="menu-items">
+                <a id="logo" href="index.html"><img id="logo-inner" src="../assets/Gabay-Logo-Black.png"></a>
+                <a class="index-redirect-link" href="index.html"><p class="header-text">Home</p></a>
+                <a class="index-redirect-link" href="train-line.html"><p class="header-text">Train Lines</p></a>
+                <a class="index-redirect-link" href="operating-line.html"><p class="header-text">Operating Lines</p></a>
+                <a class="index-redirect-link" href="about-us.html"><p class="header-text">About Us</p></a>
+            </div>
+        </div>
+    </header> 
+    
 </head>
 
 <body>
+    <!-- hero section -->
     <div class="home-section" id="hero">
         <div class="row">
             <img id="train" src="../assets/mrt-3-train.png">
@@ -44,6 +57,7 @@
         <a href="operating-line.html"> <button class="button op">Navigate Operating Lines</button> </a>
     </div>
 
+    <!-- feature section -->
     <div class="home-section" id="features">
         <div class="features-content">
             <div id="feature-title-1">TRAIN ROUTE SEARCH</div>
@@ -59,8 +73,8 @@
         </div>
     </div>
 
+    <!-- tutorial section -->
     <div class="home-section" id="tutorial">
-
         <p id="tutorial-title">LET'S GET STARTED</p>
         <p id="tutorial-content">Have a quick walkthrough to guide you through the application. 
         Keeping you guided on your next train trip.</p>
@@ -75,8 +89,8 @@
 </body>
 
 <footer>
-    <div id="branding">
-        <img src="../assets/Gabay-footer.png">
+    <div >
+        <img id="branding" src="../assets/Gabay-footer.png">
     </div>
     <div id="train-line-cont">
         <a href="train-line.html">Train Lines</a>
