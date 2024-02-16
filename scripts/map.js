@@ -8,6 +8,7 @@ let icons;
 // INITIALIZATION of GOOGLE MAP
 async function initMap(){
 
+  // import libraries
   const { Map } = await google.maps.importLibrary("maps");
   const {spherical} = await google.maps.importLibrary("geometry");
   const {PlacesService} = await google.maps.importLibrary("places");
@@ -94,53 +95,54 @@ async function initMap(){
     styles: mapStyles,
     disableDefaultUI: true,
     scaleControl: true,
-    zoomControl: true
+    zoomControl: true, 
+    setComponentRestrictions: { country: "PH"},
+    strictBounds: false
   };
 
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
   const mrt3stations = [
     {name: "Taft Avenue", coordinates: {lat: 14.537649285161207, lng: 121.00132016763716}, transit: "MRT3"},
     {name: "Magallanes", coordinates: {lat: 14.542021333882266, lng: 121.01948533623766}, transit: "MRT3"},
     {name: "Ayala", coordinates: {lat: 14.54918761935556, lng: 121.02796901365078}, transit: "MRT3"},
-    {name: "Buendia", coordinates: {lat: 14.554593018668525, lng: 121.03450916028318}, transit: "MRT3"},
-    {name: "Guadalupe", coordinates: {lat: 14.566753172270388, lng: 121.0454743913069}, transit: "MRT3"},
+    {name: "Buendia", coordinates: {lat: 14.554212109055877, lng: 121.03405766519275}, transit: "MRT3"},
+    {name: "Guadalupe", coordinates: {lat: 14.567197046915162, lng: 121.04558682048474}, transit: "MRT3"},
     {name: "Boni", coordinates: {lat: 14.573760772217677, lng: 121.0481488241322}, transit: "MRT3"},
-    {name: "Shaw Boulevard", coordinates: {lat: 14.58121001948985, lng: 121.05359774563499}, transit: "MRT3"},
+    {name: "Shaw Boulevard", coordinates: {lat: 14.58090071988067, lng: 121.05343849684087}, transit: "MRT3"},
     {name: "Ortigas", coordinates: {lat: 14.587847870919093, lng: 121.05671283638281}, transit: "MRT3"},
-    {name: "Santolan-Annapolis", coordinates: {lat: 14.607353402801348, lng: 121.05665699010544}, transit: "MRT3"},
+    {name: "Santolan-Annapolis", coordinates: {lat: 14.607934957780056, lng: 121.05644177453323}, transit: "MRT3"},
     {name: "Cubao", coordinates: {lat: 14.619489786653645, lng: 121.05112852391959}, transit: "MRT3"},
-    {name: "GMA Kamuning", coordinates: {lat: 14.635328461442384, lng: 121.04354013680073}, transit: "MRT3"},
-    {name: "Quezon Avenue", coordinates: {lat: 14.642899452124581, lng: 121.03851597346022}, transit: "MRT3"},
-    {name: "North Avenue", coordinates: {lat: 14.652011362895035, lng: 121.0324004080676}, transit: "MRT3"}
+    {name: "GMA Kamuning", coordinates: {lat: 14.635437915303045, lng: 121.04321491314433}, transit: "MRT3"},
+    {name: "Quezon Avenue", coordinates: {lat: 14.642193474106165, lng: 121.03888070320282}, transit: "MRT3"},
+    {name: "North Avenue", coordinates: {lat: 14.652189922587004, lng: 121.03232503721284}, transit: "MRT3"}
   ]
 
   const lrt1stations = [
     {name: "Baclaran", coordinates: {lat: 14.534259361042402, lng: 120.99834927698063}, transit: "LRT1"},
-    {name: "EDSA", coordinates: {lat: 14.539162615662596, lng: 121.00075725698116}, transit: "LRT1"},
+    {name: "EDSA", coordinates: {lat: 14.538713654119604, lng: 121.00065538922644}, transit: "LRT1"},
     {name: "Libertad", coordinates: {lat: 14.547749968443497, lng: 120.99861466878075}, transit: "LRT1"},
-    {name: "Gil Puyat", coordinates: {lat: 14.55423831236342, lng: 120.99715725056345}, transit: "LRT1"},
-    {name: "Vito Cruz", coordinates: {lat: 14.56333012395545, lng: 120.99485002426852}, transit: "LRT1"},
+    {name: "Gil Puyat", coordinates: {lat: 14.554053459058979, lng: 120.99721187515358}, transit: "LRT1"},
+    {name: "Vito Cruz", coordinates: {lat: 14.56356041279164, lng: 120.99478154440041}, transit: "LRT1"},
     {name: "Quirino", coordinates: {lat: 14.570301878660942, lng: 120.99155974749756}, transit: "LRT1"},
-    {name: "Pedro Gil", coordinates: {lat: 14.57652159467787, lng: 120.9882147613933}, transit: "LRT1"},
+    {name: "Pedro Gil", coordinates: {lat: 14.576475896656927, lng: 120.98810591315544}, transit: "LRT1"},
     {name: "United Nations", coordinates: {lat:14.582552044443618, lng: 120.98461925799651}, transit: "LRT1"},
     {name: "Central Terminal", coordinates: {lat: 14.592750768219823, lng: 120.98163227194854}, transit: "LRT1"},
     {name: "Carriedo", coordinates: {lat: 14.599122125622008, lng: 120.98135125837527}, transit: "LRT1"},
     {name: "Doroteo Jose", coordinates: {lat: 14.605453536999105, lng: 120.98203839553712}, transit: "LRT1"},
     {name: "Bambang", coordinates: {lat: 14.611177033275005, lng: 120.98248885457726}, transit: "LRT1"},
-    {name: "Tayuman", coordinates: {lat: 14.61653480645739, lng: 120.98268545017858}, transit: "LRT1"},
+    {name: "Tayuman", coordinates: {lat: 14.616772769674554, lng: 120.98273646305441}, transit: "LRT1"},
     {name: "Blumentritt", coordinates: {lat: 14.622638673880513, lng: 120.98290159755022}, transit: "LRT1"},
-    {name: "Abad Santos", coordinates: {lat: 14.630583958546762, lng: 120.9814219767096}, transit: "LRT1"},
+    {name: "Abad Santos", coordinates: {lat: 14.6306204984719, lng: 120.98146639467295}, transit: "LRT1"},
     {name: "R. Papa", coordinates: {lat: 14.63609147489187, lng: 120.98235941064421}, transit: "LRT1"},
     {name: "5th Avenue", coordinates: {lat: 14.644412305058113, lng: 120.98357182694123}, transit: "LRT1"},
     {name: "Monumento", coordinates: {lat: 14.654367188869754, lng: 120.98389329470618}, transit: "LRT1"},
-    {name: "Balintawak", coordinates: {lat: 14.6574285559376, lng: 121.00369661747241}, transit: "LRT1"},
+    {name: "Balintawak", coordinates: {lat: 14.657456906850484, lng: 121.0039170391827}, transit: "LRT1"},
     {name: "Fernando Poe Jr.", coordinates: {lat: 14.65745690977713, lng: 121.02117959044276}, transit: "LRT1"}
   ]
 
   const lrt2stations = [
-    {name: "Recto", coordinates: {lat: 14.603522783351679, lng: 120.98308551213792}, transit: "LRT2"},
-    {name: "Legarda", coordinates: {lat: 14.600949290758683, lng: 120.9928090910209}, transit: "LRT2"},
+    {name: "Recto", coordinates: {lat: 14.603563354790033, lng: 120.98357506684575}, transit: "LRT2"},
+    {name: "Legarda", coordinates: {lat: 14.60086500542583, lng: 120.9925814719515}, transit: "LRT2"},
     {name: "Pureza", coordinates: {lat: 14.601748764493554, lng: 121.0051776240505}, transit: "LRT2"},
     {name: "V.Mapa", coordinates: {lat: 14.604079511393822, lng: 121.0171413792474}, transit: "LRT2"},
     {name: "J. Ruiz", coordinates: {lat: 14.610547353713093, lng: 121.02614439921165}, transit: "LRT2"},
@@ -148,9 +150,9 @@ async function initMap(){
     {name: "Betty Go-Belmonte", coordinates: {lat: 14.618559000459435, lng: 121.04282130799182}, transit: "LRT2"},
     {name: "Cubao", coordinates: {lat: 14.622739598256825, lng: 121.05277348296076}, transit: "LRT2"},
     {name: "Anonas", coordinates: {lat: 14.627948206184568, lng: 121.06470395320373}, transit: "LRT2"},
-    {name: "Katipunan", coordinates: {lat: 14.631093507987051, lng: 121.07250145735868}, transit: "LRT2"},
+    {name: "Katipunan", coordinates: {lat: 14.631138602736003, lng: 121.072956826148}, transit: "LRT2"},
     {name: "Santolan", coordinates: {lat: 14.62211606646923, lng: 121.08593929432817}, transit: "LRT2"},
-    {name: "Marikina", coordinates: {lat: 14.620388173583367, lng: 121.10027391749911}, transit: "LRT2"},
+    {name: "Marikina", coordinates: {lat: 14.620482219981785, lng: 121.10057250609199}, transit: "LRT2"},
     {name: "Antipolo", coordinates: {lat: 14.624880637270977, lng: 121.1214128032166}, transit: "LRT2"}
   ];
 
@@ -170,6 +172,7 @@ async function initMap(){
     addStationMarker(lrt2stations[i]);
   }
 
+  // initializes path of the train tracks
   drawPath (mrt3stations[0].coordinates, mrt3stations[12].coordinates, 'MRT3')
   drawPath(lrt1stations[0].coordinates, lrt1stations[19].coordinates, 'LRT1');
   drawPath(lrt2stations[0].coordinates, lrt2stations[12].coordinates, 'LRT2');
@@ -177,6 +180,7 @@ async function initMap(){
   searchLocation();
 }
 
+// initialize the station markers of MRT3, LRT 1, LRT 2
 function addStationMarker(station) {
   marker = new google.maps.Marker({
     position: station.coordinates, 
@@ -190,6 +194,7 @@ function addStationMarker(station) {
   markers.push(marker);
 }
 
+// compares the distance of the arrival and departure markers among all the markers
 function findClosestStation(coordinates) {
   var distances = [];
   var closest = -1;
@@ -200,16 +205,17 @@ function findClosestStation(coordinates) {
       closest = i;
     }
   }
-  console.log(`<p> Closest marker is: ${markers[closest].title + ' ' + markers[closest].position}</p>`);
 
-  console.log(markers[closest]);
   return markers[closest];
 }
 
+// get the input from search box to search for the optimized route when travelling via train
 function searchLocation() {
   
   var departure = new google.maps.places.SearchBox(document.getElementById('departure'));
   var destination = new google.maps.places.SearchBox(document.getElementById('arrival'));
+
+  // polyline for the shown direction
   const directionsOptions = {
     suppressMarkers: true,
     polylineOptions: {
@@ -226,6 +232,7 @@ function searchLocation() {
 
   directionsDisplay.setMap(map);
   
+  // set the img for marker
   departureMarker = new google.maps.Marker({
     position: null,
     map: map,
@@ -246,7 +253,7 @@ function searchLocation() {
   }
   });
 
-  // set departure location of user
+  // set departure location of user when the marker has been dragged
   google.maps.event.addListener(departure, 'places_changed', 
   function(){
 
@@ -261,7 +268,7 @@ function searchLocation() {
     map.setZoom(15);
   })
 
-  // set destination location of user
+  // set destination location of user when the marker has been dragged
   google.maps.event.addListener(destination, 'places_changed', 
   function(){
 
@@ -283,6 +290,7 @@ function searchLocation() {
   )
 }
 
+// Drawing the path and displaying the transit and transfer in results
 function displayRoute (directionsService, directionsDisplay) {
 
   const originStation = departureMarker.getPosition();
@@ -302,71 +310,61 @@ function displayRoute (directionsService, directionsDisplay) {
     if (status === 'OK') {
       directionsDisplay.setDirections(response);
 
-      const move = response.routes[0].legs[0].steps;
+      const move = response.routes[0].legs[0].steps; // accessing travel whether walking or via train
       const moveLength = response.routes[0].legs[0].steps.length; // number of walking and riding a train
-      const mode = move
 
       let panelContent = '';
       let panelHTML = '';
-      
-      for (let i=0, j=1; i<moveLength; i++) {
-        
-        let travelMode = move[i].travel_mode;
-        let lastTransit = 0
-        let count = 0
 
-        console.log(travelMode)
+      let mrt3Stations = ["Taft Avenue", "Magallanes", "Ayala", "Buendia", "Guadalupe", 
+                              "Boni Pioneer Bus Stop", "Shaw Boulevard", "Ortigas", "Santolan-Annapolis", 
+                              "Araneta Center-Cubao", "GMA Kamuning Station", "Quezon Avenue", "North Avenue"]
+      let lrt1Stations = ["Baclaran", "EDSA", "Libertad", "Gil Puyat", "Vito Cruz",
+                          "Quirino Station", "Pedro Gil", "United Nations", "Central Terminal",
+                          "Carriedo LRT Station", "Doroteo Jose", "Bambang LRT Station", "Tayuman", "Blumentritt",
+                          "Abad Santos", "R.Papa LRT Station", "5th Avenue", "Monumento", "Balintawak",
+                          "Fernando Poe Jr."]
+      let lrt2Stations = ["Recto", "Legarda", "Pureza", "V. Mapa", "J. Ruiz", "Gilmore",
+                          "Betty Go-Belmonte", "Araneta Center - Cubao Station", "Anonas", "Katipunan", "Santolan MRT-2 Station",
+                              "Marikina", "Antipolo"]
+
+      
+      // Accessing the optimized route Google has provided
+      for (let i=0, j=1; i<moveLength; i++) {
+        var travelMode = move[i].travel_mode;
+        var transitCount;
+
+        let count=0;
+        let transitOrder;
+
+        console.log(moveLength)
 
         // counts the number of riding a train
         for (let k=0; k<moveLength; k++) {
-          if (mode[k].travel_mode === "TRANSIT")
-            count++;
-          if (count > 0)
-            lastTransit=k;
+          if (move[k].travel_mode === "TRANSIT") { count++; }
           }
-
+        
         if (travelMode === 'TRANSIT') {
-          var departureStation = move[i].transit.departure_stop.name;
-          var arrivalStation = move[i].transit.arrival_stop.name;
+          let departureStation = move[i].transit.departure_stop.name;
+          let arrivalStation = move[i].transit.arrival_stop.name;
           let departureTransit
           let arrivalTransit
-          
-          console.log("Departure Stop")
-          console.log(move[i].transit.departure_stop)
 
           let line = move[i].transit.line.short_name
           let line2 = move[i].transit.line.name
           let distance;
 
-          let mrt3Stations = ["Taft Avenue", "Magallanes", "Ayala", "Buendia", "Guadalupe", 
-                              "Boni", "Shaw Boulevard", "Ortigas", "Santolan-Annapolis", 
-                              "Cubao MRT", "GMA Kamuning", "Quezon Avenue", "North Avenue"]
-          let lrt1Stations = ["Baclaran", "EDSA", "Libertad", "Gil Puyat", "Vito Cruz",
-                              "Quirino", "Pedro Gil", "United Nations", "Central Terminal",
-                              "Carriedo", "Doroteo Jose", "Bambang", "Tayuman", "Blumentritt",
-                              "Abad Santos", "R. Papa", "5th Avenue", "Monumento", "Balintawak",
-                              "Fernando Poe Jr."]
-          let lrt2Stations = ["Recto", "Legarda", "Pureza", "V. Mapa", "J. Ruiz", "Gilmore",
-                              "Betty Go-Belmonte", "Araneta Center - Cubao Station", "Anonas", "Katipunan", "Santolan",
-                              "Marikina", "Antipolo"]
-
-              
-
-          console.log('Departure Station')
-          console.log(departureStation)
-          console.log('Arrival Station')
-          console.log(arrivalStation)
-          
-          //Determining the transit of departure station
+          // Determining the transit of departure station
           if (mrt3Stations.includes(departureStation)) { departureTransit = "MRT3"} 
           else if (lrt1Stations.includes(departureStation)) { departureTransit = "LRT1" }
           else if (lrt2Stations.includes(departureStation)) { departureTransit = "LRT2" }
 
-          //Determining the transit of arrival station
-          if (mrt3Stations.includes(arrivalStation)) { arrivalTransitTransit = "MRT3"} 
-          else if (lrt1Stations.includes(arrivalStation)) { arrivalTransitTransit = "LRT1" }
-          else if (lrt2Stations.includes(arrivalStation)) { arrivalTransitTransit = "LRT2" }
+          // Determining the transit of arrival station
+          if (mrt3Stations.includes(arrivalStation)) { arrivalTransit = "MRT3"} 
+          else if (lrt1Stations.includes(arrivalStation)) { arrivalTransit = "LRT1" }
+          else if (lrt2Stations.includes(arrivalStation)) { arrivalTransit = "LRT2" }
 
+          // Assigning a different value for fare computation in MRT Line 3
           if (line === "MRT Line 3")
             { distance = move[i].transit.num_stops; } 
           else { distance = move[i].distance.value/1000; }
@@ -387,22 +385,22 @@ function displayRoute (directionsService, directionsDisplay) {
                         <label id="time">${move[i].duration.text}</label>
                     </div>
                     <div id="stations">
-                        <div class="station-frame"> <!--${departureTransit} -->
-                            <img src="../assets/line-color-LRT1.svg" class="line-color"/>
+                        <div class="station-frame">
+                            <img src="../assets/${departureTransit}-line-up.svg" class="line-color"/>
                             <div class="station-name">
                             <!-- change the name of the departure station -->
                             <label id="departure-label">${departureStation}</label>
                              </div>
-                            <img src="../assets/line-name-lrt-1.png" class="train-line"/> <!-- change the train line -->
+                            <img src="../assets/line-name-${departureTransit}.png" class="train-line"/> <!-- change the train line -->
                         </div>
 
                         <div class="station-frame"> 
-                            <img src="../assets/line-color-LRT2.svg" class="line-color"/>
+                            <img src="../assets/${arrivalTransit}-line-down.svg" class="line-color"/>
                             <div class="station-name">
                             <!-- change the name of the departure station -->
                             <label id="arrival-label">${arrivalStation}</label>
                             </div>
-                            <img src="../assets/line-name-lrt-2.png" class="train-line"/> <!-- change the train line -->
+                            <img src="../assets/line-name-${arrivalTransit}.png" class="train-line"/> <!-- change the train line -->
                         </div>
                     </div>
                 </div>
@@ -424,25 +422,64 @@ function displayRoute (directionsService, directionsDisplay) {
             `
           panelHTML+=panelContent;
           j++;
-
+          transitCount = 1
         }
         
-        // determines if the current mode [walking] is in between the two modes transit
-        else if (i == lastTransit-1 && count > 2) {
+        // determines if the current mode, walking is in between the two modes, transit
+        // Only displays when walking is in between the two modes, transit
+        else if (travelMode === "WALKING" && transitCount == 1 && count == 2) {
 
           let destinationStation = move[i+1].transit.departure_stop.name
           let currentStation = move[i-1].transit.arrival_stop.name
+          let current
+          let destination
+          let instructions =  move[i].instructions
+          let duration = findTransferTime(currentStation)
+
+          // Determining the departure station
+          if (mrt3Stations.includes(currentStation)) { current = "MRT3"} 
+          else if (lrt1Stations.includes(currentStation)) { current = "LRT1" }
+          else if (lrt2Stations.includes(currentStation)) { current = "LRT2" }
+
+          // Determining arrival station
+          if (mrt3Stations.includes(destinationStation)) { destination = "MRT3"} 
+          else if (lrt1Stations.includes(destinationStation)) { destination = "LRT1" }
+          else if (lrt2Stations.includes(destinationStation)) { destination = "LRT2" }
+
+          console.log("WALKING")
+          console.log(move[i])
         
             panelContent = 
-              `<div> 
-              <h3>Transfer</h3>
-              <div>From: ${currentStation}</div>
-              <div>Walk to:${destinationStation}</div>
+              `<div class="transfer-container"> 
+              <h3 class="transfer-title">Transfer</h3>
+              <div class="current-station"><img class="img-station" src="../assets/${current}-line-up.svg">${currentStation}<img class="img-station" src="../assets/line-name-${current}.png"></div>
+              <div class="directions-container">
+              ${duration}
+              <div class="instruction">&#160${instructions}</div></div>
+              <div class="destination-station"><img class="img-station" src="../assets/${destination}-line-down.svg">${destinationStation}<img class="img-station" src="../assets/line-name-${destination}.png"></div>
               </div>`
-            panelContent+=findTransferTime(arrivalStation);
+            panelHTML+=panelContent;
+        }
+
+        else if (travelMode === 'WALKING') {
+
+          console.log("WALKING TRAVEL")
+          let instructions =  move[i].instructions
+          console.log(move[i])
+
+
+          // Assigning values to station depending on the order of walking travel mode
+          panelContent = 
+              `<div class="transfer-container"> 
+              <h3 class="transfer-title">Transfer</h3>
+              <div class="directions-container-dir">
+              <div class="instruction">${instructions}</div></div>
+              </div>`
             panelHTML+=panelContent;
         }
       }
+
+      // another else if for walking after the last travel mode, transit
       document.querySelector(".js-result-panel").innerHTML = panelHTML;
 
     } else {
@@ -453,19 +490,21 @@ function displayRoute (directionsService, directionsDisplay) {
 
 function findTransferTime(arrivalStation) {
 
-  let panelContent = '';
-
   if (arrivalStation === 'Recto' || arrivalStation === 'Doroteo Jose' || arrivalStation === 'Taft Avenue' || arrivalStation === 'EDSA') {
-    return `<div>Duration: 5 minutes</div>`
-    } else {
-      return `<div>Duration: 7 minutes</div>`
+    return `<div class="duration">5 Minutes </div>`
+    } 
+  else if (arrivalStation === 'Araneta Center - Cubao Station' || arrivalStation === 'Araneta Center-Cubao') {
+      return `<div class="duration">7 Minutes </div>`
       }
+  
+  if (arrivalStation === "Fernando Poe Jr." || arrivalStation === "North Avenue") {
+    return `<div class="duration">22 Minutes </div>`
+  }
 }
 
 function drawPath (origin, destination, type) {
 
   var directionsService = new google.maps.DirectionsService;
-  console.log(origin)
 
   directionsService.route({
     origin: origin,
@@ -552,4 +591,3 @@ function computeFare(distance, mode, line, line2) {
     return fare;
   }
 }
-
