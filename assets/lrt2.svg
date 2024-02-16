@@ -28,8 +28,8 @@
 	<path xmlns="http://www.w3.org/2000/svg" d="M138.941 285.5L331.462 285.5C346.453 285.205 358.247 278.186 357.967 263.676L357.227 232.305C356.947 217.795 368.875 205.791 383.867 205.496L846.498 205.496"/>
 	<rect xmlns="http://www.w3.org/2000/svg" x="830" y="230" width="36" height="13" rx="6.5" fill="#9202CE"/>
 	<text x="836" y="239" style = "font-size: 8; font-weight: bold; fill: white">LRT - 2</text>
-	<text x="140" y="268" text-anchor="middle">Recto</text>
-	<circle cx= "140" cy="285"/>
+	<text class="recto" x="140" y="268" text-anchor="middle">Recto</text>
+	<circle id="recto" cx= "140" cy="285" pointer-events="visiblePainted" />
 	<text x="200" y="268" text-anchor="middle">Legarda</text>
 	<circle cx= "200" cy="285"/>
 	<text x="260" y="268" text-anchor="middle">Pureza</text>
@@ -105,5 +105,3 @@
 	</a>
 	
 </svg>
-	
-
