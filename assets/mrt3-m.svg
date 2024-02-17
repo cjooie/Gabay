@@ -75,7 +75,7 @@
 	<text x="256.5" y="345" text-anchor="middle" style="letter-spacing: 1.5px">Monday to Friday</text>
 	<text x="256.5" y="355" text-anchor="middle" style="letter-spacing: 1.5px">4:59 AM - 9:10 PM</text>
 	<text x="256.5" y="385" text-anchor="middle" style="letter-spacing: 1.5px">Saturday and Sunday</text>
-	<text x="256.5" y="395" text-anchor="middle" style="letter-spacing: 1.5px">12:00 AM - 11:00 PM</text>
+	<text x="256.5" y="395" text-anchor="middle" style="letter-spacing: 1.5px">4:30 AM - 11:00 PM</text>
 
 	
 	<rect xmlns="http://www.w3.org/2000/svg" x="183" y="490" width="135" height="220" rx="22" fill="#FFFFFF" stroke="#FAFAFA" stroke-width="2"/>

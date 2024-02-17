@@ -101,6 +101,8 @@ async function initMap(){
   };
 
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+  // Stations and their corresponding latitude and longitude for markers
   const mrt3stations = [
     {name: "Taft Avenue", coordinates: {lat: 14.537649285161207, lng: 121.00132016763716}, transit: "MRT3"},
     {name: "Magallanes", coordinates: {lat: 14.542021333882266, lng: 121.01948533623766}, transit: "MRT3"},
@@ -160,6 +162,7 @@ async function initMap(){
   const lengthLrt1 = lrt1stations.length;
   const lengthLrt2 = lrt2stations.length;
 
+  // Creating markers during google map initialization
   for (var i = 0; i < lengthMrt3; i++) {
     addStationMarker(mrt3stations[i]);
   }
@@ -172,7 +175,7 @@ async function initMap(){
     addStationMarker(lrt2stations[i]);
   }
 
-  // initializes path of the train tracks
+  // draws path of the train tracks
   drawPath (mrt3stations[0].coordinates, mrt3stations[12].coordinates, 'MRT3')
   drawPath(lrt1stations[0].coordinates, lrt1stations[19].coordinates, 'LRT1');
   drawPath(lrt2stations[0].coordinates, lrt2stations[12].coordinates, 'LRT2');
@@ -180,7 +183,7 @@ async function initMap(){
   searchLocation();
 }
 
-// initialize the station markers of MRT3, LRT 1, LRT 2
+// initialize the station markers of MRT 3, LRT 1, LRT 2
 function addStationMarker(station) {
   marker = new google.maps.Marker({
     position: station.coordinates, 
@@ -232,7 +235,7 @@ function searchLocation() {
 
   directionsDisplay.setMap(map);
   
-  // set the img for marker
+  // set the img for departure and destination/arrival marker
   departureMarker = new google.maps.Marker({
     position: null,
     map: map,
@@ -329,7 +332,7 @@ function displayRoute (directionsService, directionsDisplay) {
                               "Marikina", "Antipolo"]
 
       
-      // Accessing the optimized route Google has provided
+      // Accessing the route Google has provided
       for (let i=0, j=1; i<moveLength; i++) {
         var travelMode = move[i].travel_mode;
         var transitCount;
@@ -461,6 +464,7 @@ function displayRoute (directionsService, directionsDisplay) {
             panelHTML+=panelContent;
         }
 
+        // Displays directions when walking is not in between two travel mode, transit
         else if (travelMode === 'WALKING') {
 
           console.log("WALKING TRAVEL")
@@ -488,6 +492,7 @@ function displayRoute (directionsService, directionsDisplay) {
   })
 }
 
+// when called returns the corresponding time taken in transfer in accordance to the arrival station
 function findTransferTime(arrivalStation) {
 
   if (arrivalStation === 'Recto' || arrivalStation === 'Doroteo Jose' || arrivalStation === 'Taft Avenue' || arrivalStation === 'EDSA') {
@@ -502,6 +507,7 @@ function findTransferTime(arrivalStation) {
   }
 }
 
+// draws a polyline, used in map initialization to display the pathway of MRT 3, LRT 1, and LRT 2 transits
 function drawPath (origin, destination, type) {
 
   var directionsService = new google.maps.DirectionsService;
@@ -547,6 +553,7 @@ function drawPath (origin, destination, type) {
   })
 }
 
+// resturns the values of the corresponding fare in accordance to distance, mode, and transit line
 function computeFare(distance, mode, line, line2) {
   
   let fare = 0;
